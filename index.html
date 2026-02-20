@@ -1,15 +1,50 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <title>Verificador de Idade</title>
+    <link rel="preconnect" />
+    <link
+      rel="preconnect"
+      href="[https://fonts.googleapis.com](https://fonts.googleapis.com/)"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Verificador de Idade</h1>
+    <div class="tela">
+      <div class="esquerda"></div>
+      <div class="direita">
+        <div class="login-box">
+          <h1>Faça seu Login</h1>
+          <input type="email" id="email" placeholder="Digite seu email" />
+          <input type="senha" id="senha" placeholder="Digite sua senha" />
+          <button id="btnLogin">Entrar</button>
+          <p id="mensagem"></p>
+          <a href="#" class="forgot">Esqueceu sua senha ?</a>
+          <div id="sociallinks">
+            <a href="https://accounts.google.com" target="_blank"
+              ><ion-icon name="logo-google"></ion-icon
+            ></a>
+            <a href="https://github.com/robertowanbasten1209" target="_blank"
+              ><ion-icon name="logo-github"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
 
-    <button onclick="verificar()">Verificar idade</button>
-
-    <p id="resultado"></p>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script src="script.js"></script>
   </body>

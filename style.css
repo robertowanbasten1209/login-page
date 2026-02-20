@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.tela {
+  display: flex;
+  height: 100vh;
+}
+
+.esquerda {
+  flex: 1;
+  background: rgb(132, 0, 255);
+
+  background-image: url("./imagens/fundo\ roxo\ escuro.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.direita {
+  flex: 1;
+  background: rgb(26, 25, 25);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 45px;
+}
+
+.login-box {
+  background: rgba(30, 30, 30, 0.75);
+  backdrop-filter: blur(6px);
+  background-image: url("./imagens/3ad870c0ed2658b1ad4fe7a90bf34732.jpg");
+  padding: 40px;
+
+  border-radius: 20px; /* pontas arredondadas */
+
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+
+  width: 350px;
+  height: 470px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  animation: aparecer 1s ease;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+
+  transition: 0.3s;
+}
+
+input:focus {
+  border: 2px solid rgb(180, 130, 255);
+  outline: none;
+}
+
+button {
+  background: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background: rgb(180, 130, 255);
+  color: white;
+  transform: scale(1.05);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.forgot {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.forgot:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+#sociallinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#sociallinks a {
+  font-size: 35px;
+  color: white;
+  transition: 0.3s;
+}
+
+#sociallinks a:hover {
+  transform: scale(1.2);
+  color: #a855f7;
+}
+
+@media (max-width: 768px) {
+  .tela {
+    flex-direction: column;
+  }
+
+  .esquerda {
+    height: 280px;
+  }
+
+  .login-box {
+    width: 90%;
+  }
+}

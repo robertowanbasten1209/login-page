@@ -1,11 +1,19 @@
-function verificar() {
-  let idade = Number(prompt("Digite sua idade:"))
+//pegando elementos do html
+const email = document.querySelector("#email")
+const senha = document.querySelector("#senha")
+const botão = document.querySelector("#btnLogin")
+const msg = document.querySelector("#mensagem")
 
-  let resultado = document.querySelector("#resultado")
-
-  if (idade >= 18) {
-    resultado.innerText = "Voce é maior de idade"
-  } else {
-    resultado.innerText = "Voce é menor de idade"
+//quando clicar no botao
+botão.addEventListener("click", function () {
+  //se estivar vazio
+  if (email.value === "" || senha.value === "") {
+    msg.innerText = "Preencha todos os campos !"
+    msg.style.color = "red"
   }
-}
+  //se tiver preenchido
+  else {
+    msg.innerText = "Login realizado com sucesso !"
+    msg.style.color = "green"
+  }
+})
